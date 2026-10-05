@@ -322,6 +322,62 @@ select { color: var(--text-faint); cursor: pointer; }
 .image-copy.align-bottom-right p { margin-left: auto; }
 
 /* ================================================
+   TABLET / iPAD RESPONSIVE
+   Covers iPad mini/standard/Air/Pro, portrait + landscape
+   (CSS viewport widths roughly 744px–1194px)
+   ================================================ */
+@media (max-width: 1100px) {
+  .page-center { padding: 28px 20px; }
+
+  .auth-shell {
+    width: 100%;
+    max-width: 860px;
+  }
+
+  .auth-shell-inner { min-height: 0; }
+
+  .auth-panel-form {
+    width: 380px;
+    padding: 32px 34px;
+  }
+
+  .auth-panel-image { padding: 24px; }
+
+  .image-copy h1 { font-size: 25px; max-width: 230px; }
+  .image-copy p { font-size: 12.5px; max-width: 250px; }
+
+  .trust-item {
+    font-size: 10.5px;
+    padding: 14px 12px;
+    gap: 6px;
+  }
+  .trust-item svg { width: 14px; height: 14px; }
+}
+
+/* Narrower tablets in portrait (e.g. iPad mini 768px, split-view) —
+   still two columns but tighter form panel */
+@media (max-width: 820px) {
+  .auth-panel-form { width: 340px; padding: 28px 26px; }
+  .image-copy h1 { font-size: 21px; max-width: 190px; }
+  .image-copy p { font-size: 12px; max-width: 210px; }
+}
+
+/* Fallback: true phone-width viewports loading a desktop page directly
+   (dedicated mobile-*.html pages are unaffected by this) */
+@media (max-width: 700px) {
+  .auth-shell { max-width: 440px; }
+  .auth-shell-inner { flex-direction: column; }
+  .auth-panel-image {
+    min-height: 220px;
+    padding: 20px;
+  }
+  .auth-panel-form { width: 100%; padding: 28px 24px; }
+  .trust-bar { flex-direction: column; }
+  .trust-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .trust-item:last-child { border-bottom: none; }
+}
+
+/* ================================================
    MOBILE PHONE FRAME
    ================================================ */
 .phone-wrap {
