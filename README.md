@@ -1,6 +1,6 @@
-# prototype-Design — DesignNest Auth Prototype
+# prototype-Design — TokoGaris Auth Prototype
 
-Prototype halaman autentikasi untuk **DesignNest** (marketplace desain fashion digital), dibuat dalam HTML/CSS statis — desktop & mobile.
+Prototype halaman autentikasi untuk **TokoGaris** (marketplace desain fashion digital), dibuat dalam HTML/CSS statis — desktop & mobile.
 
 ## Halaman
 
